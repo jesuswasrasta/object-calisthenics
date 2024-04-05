@@ -42,4 +42,18 @@ public class AccountTest {
 
     assertEquals(expectedBalance, actualBalance);
   }
+
+  @Test
+  public void setDueDepositiDa1000IlSaldoE2000() {
+    var expectedBalance = new Balance(2000);
+
+    var amount = new Amount(1000);
+    Account account = new Account();
+    account.deposit(amount);
+    account.deposit(amount);
+
+    var actualBalance = account.printBalance();
+
+    assertEquals(expectedBalance, actualBalance);
+  }
 }

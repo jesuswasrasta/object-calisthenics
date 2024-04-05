@@ -1,9 +1,16 @@
 public class Account {
-    public void deposit(Amount amount) {
 
+    private Balance balance;
+
+    public Account() {
+        this.balance = new Balance(0);
+    }
+
+    public void deposit(Amount amount) {
+        balance.add(amount);
     }
 
     public Balance printBalance() {
-        return new Balance(1000);
+        return balance;
     }
 }
