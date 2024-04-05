@@ -3,7 +3,7 @@ Il lavoro dello sviluppatore è simile a quello di un atleta.
 Per continuare a offrire prestazioni di qualità, è necessario tenersi in allenamento.  
 In questo workshop impareremo una serie di esercizi "fondamentali" al fine di stimolare la nostra muscolatura Object Oriented.  
 
-Questo workshop è basato sul lavoro di Jeff Bay, [Object Calisthenics - 9 steps to better software design today](Object-Calisthenics-Jeff-Bay.pdf).  
+Questo workshop è basato sul lavoro di Jeff Bay, [Object Calisthenics - 9 steps to better software design today](./assets/Object-Calisthenics-Jeff-Bay.pdf).  
 [Qui le slide](https://docs.google.com/presentation/d/1qtNCHFhilmb4wSWheJuPWVvxEuWzNClOuee_pmJ78Ds/edit?usp=sharing) che uso durante i workshop.
 
 ## Come è organizzato il workshop
@@ -27,9 +27,13 @@ Nell'iterazione successiva ci si scambia la tastiera.
 ## Kata
 
 ### Variante TDD
+- [Bank Kata](https://github.com/sandromancuso/Bank-kata)
+- [Bank Kata from Kata-Log](https://kata-log.rocks/banking-kata)
+
 - [Tic Tac Toe](https://kata-log.rocks/tic-tac-toe-kata).  
 - [Tic Tac Toe, another take](https://codingdojo.org/kata/tic-tac-toe/).  
-
+- [Regole TicTacToe in formato stampabile](./assets/Object-Calisthenics-TicTacToe-printable-rules.pdf).  
+- 
 #### Other katas
 - [Coding Dojo](https://codingdojo.org/kata/).  
 - [Kata-log](https://kata-log.rocks/).  
@@ -39,8 +43,8 @@ Nell'iterazione successiva ci si scambia la tastiera.
 - [Tennis Kata di Emily Bache](https://github.com/emilybache/Tennis-Refactoring-Kata).  
 
 ## Materiale
-- [Regole Object Calisthenics in formato stampabile](./Object-Calisthenics-printable-rules.pdf).  
-- [Regole TicTacToe in formato stampabile](./Object-Calisthenics-TicTacToe-printable-rules.pdf).  
+- [Regole Object Calisthenics in formato stampabile](./assets/Object-Calisthenics-printable-rules.pdf).  
+
 
 ### Links
  - https://williamdurand.fr/2013/06/03/object-calisthenics/
