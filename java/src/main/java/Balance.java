@@ -24,6 +24,9 @@ public class Balance {
         amount = amount.subtract(amountToSubtract);
     }
 
+    public Amount currentAmount() {
+        return amount;
+    }
 
     @Override
     public boolean equals(Object other) {
@@ -40,8 +43,6 @@ public class Balance {
 
     @Override
     public String toString() {
-        return "Balance{" +
-                "amount=" + amount +
-                '}';
+        return amount.toString();
     }
 }

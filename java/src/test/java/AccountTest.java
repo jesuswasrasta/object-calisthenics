@@ -122,10 +122,10 @@ date       || credit   || debit    || balance
   @DisplayName("Stampa del saldo dopo aver depositato 1000 e poi ancora 1000")
   public void depositoMultiplo() {
     String saldoAtteso = """
-date       || credit   || debit    || balance
-12/04/2024 || 1000.00  ||          || 1000.00
-12/04/2024 || 1000.00  ||          || 1000.00
-""";
+            date       || credit   || debit    || balance
+            12/04/2024 || 1000.00  ||          || 1000.00
+            12/04/2024 || 1000.00  ||          || 2000.00
+            """;
 
     var amount = new Amount(1000);
     Account account = new Account();
@@ -134,7 +134,7 @@ date       || credit   || debit    || balance
 
     var saldoStampato = account.printStatement();
 
-    assertEquals(saldoAtteso, saldoStampato);
-  }
+    StringAssertions.assertLinesEqual(saldoAtteso, saldoStampato);
 
+  }
 }
