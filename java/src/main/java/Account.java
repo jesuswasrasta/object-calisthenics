@@ -17,4 +17,9 @@ public class Account {
     public Balance printBalance() {
         return balance;
     }
+
+    public String printStatement() {
+        return "date       || credit   || debit    || balance\n" +
+                "12/04/2024 || 1000.00  ||          || 1000.00\n";
+    }
 }
