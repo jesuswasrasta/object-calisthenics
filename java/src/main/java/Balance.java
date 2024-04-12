@@ -18,6 +18,9 @@ public class Balance {
     }
 
     public void withdraw(Amount amountToSubtract) {
+        if (amountToSubtract.compareTo(amount) > 0)
+            throw new IllegalArgumentException("Prelievo non possibile");
+
         amount = amount.subtract(amountToSubtract);
     }
 
