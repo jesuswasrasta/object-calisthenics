@@ -1,7 +1,8 @@
+import jdk.jfr.Description;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * The Rules
@@ -84,5 +85,19 @@ public class AccountTest {
     var actualBalance = account.printBalance();
 
     assertEquals(expectedBalance, actualBalance);
+  }
+
+  @Test
+  @DisplayName("Se depositi 1000 e prelevi 1500, il sistema solleva una eccezione")
+  public void amountPrelevatoMaggioreDiSaldo() {
+    Account account = new Account();
+
+    var depositedAmount = new Amount(1000);
+    account.deposit(depositedAmount);
+
+    assertThrows(IllegalArgumentException.class, () -> {
+      var withdrawAmount = new Amount(1500);
+      account.withdraw(withdrawAmount);
+    });
   }
 }
