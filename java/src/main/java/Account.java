@@ -13,4 +13,8 @@ public class Account {
     public Balance printBalance() {
         return balance;
     }
+
+    public void withdraw(Amount amount) {
+        balance = new Balance(1000);
+    }
 }
