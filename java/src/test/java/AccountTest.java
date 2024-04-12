@@ -100,4 +100,23 @@ public class AccountTest {
       account.withdraw(withdrawAmount);
     });
   }
+
+  @Test
+  @DisplayName("Stampa del saldo dopo aver depositato 1000")
+  public void seDeposito1000StampaOperazione() {
+    String saldoAtteso = """
+date       || credit   || debit    || balance
+12/04/2024 || 1000.00  ||          || 1000.00
+""";
+
+    var amount = new Amount(1000);
+    Account account = new Account();
+    account.deposit(amount);
+
+    var saldoStampato = account.printStatement();
+
+    assertEquals(saldoAtteso, saldoStampato);
+  }
+
+
 }
