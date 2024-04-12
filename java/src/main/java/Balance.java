@@ -1,3 +1,4 @@
+import java.text.MessageFormat;
 
 /**
  * Represents a balance in a bank account.
@@ -35,4 +36,11 @@ public class Balance {
                 "amount=" + amount +
                 '}';
     }
+
+    @Override
+    public String toString() {
+        return MessageFormat.format("Balance'{'amount={0}'}'", amount);
+    }
+
+
 }

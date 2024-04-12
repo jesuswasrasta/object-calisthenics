@@ -16,7 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * - No getters/setters/properties
  *
  *
- *
  * Given a client makes a deposit of 1000 on 10-01-2012
  * And a deposit of 2000 on 13-01-2012
  * And a withdrawal of 500 on 14-01-2012
@@ -51,6 +50,21 @@ public class AccountTest {
     Account account = new Account();
     account.deposit(amount);
     account.deposit(amount);
+
+    var actualBalance = account.printBalance();
+
+    assertEquals(expectedBalance, actualBalance);
+  }
+
+  @Test
+  public void seDepositi2000ePrelevi1000IlSaldoe1000() {
+    var expectedBalance = new Balance(1000);
+
+    var amount = new Amount(1000);
+    Account account = new Account();
+    account.deposit(amount);
+    account.deposit(amount);
+    account.withdraw(amount);
 
     var actualBalance = account.printBalance();
 

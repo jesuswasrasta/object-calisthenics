@@ -36,4 +36,7 @@ public class Amount implements Comparable<Amount> {
     public int hashCode() {
         return Objects.hash(amount);
     }
+
+
+
 }
