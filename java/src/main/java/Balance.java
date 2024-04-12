@@ -13,6 +13,15 @@ public class Balance {
         this.amount = new Amount(amount);
     }
 
+    public void add(Amount amountToAdd) {
+        amount = amount.add(amountToAdd);
+    }
+
+    public void withdraw(Amount amountToSubtract) {
+        amount = amount.subtract(amountToSubtract);
+    }
+
+
     @Override
     public boolean equals(Object other) {
         if (this == other) return true;
@@ -26,21 +35,10 @@ public class Balance {
         return amount.hashCode();
     }
 
-    public void add(Amount amountToAdd) {
-        amount = amount.add(amountToAdd);
-    }
-
     @Override
     public String toString() {
         return "Balance{" +
                 "amount=" + amount +
                 '}';
     }
-
-    @Override
-    public String toString() {
-        return MessageFormat.format("Balance'{'amount={0}'}'", amount);
-    }
-
-
 }

@@ -1,6 +1,9 @@
 import java.util.Objects;
 
-public class Amount implements Comparable<Amount> {
+/**
+ * Questo amount è un value object, quindi è immutabile
+ */
+public final class Amount implements Comparable<Amount> {
 
     private int amount;
 
@@ -8,13 +11,17 @@ public class Amount implements Comparable<Amount> {
         this.amount = amount;
     }
 
+    public Amount add(Amount amountToAdd) {
+        return new Amount(amount + amountToAdd.amount);
+    }
+
+    public Amount subtract(Amount amountToSubtract) {
+        return new Amount(amount - amountToSubtract.amount);
+    }
+
     @Override
     public int compareTo(Amount o) {
         return amount - o.amount;
-    }
-    
-    public Amount add(Amount amountToAdd) {
-        return new Amount(amount + amountToAdd.amount);
     }
 
     @Override
@@ -36,7 +43,5 @@ public class Amount implements Comparable<Amount> {
     public int hashCode() {
         return Objects.hash(amount);
     }
-
-
 
 }

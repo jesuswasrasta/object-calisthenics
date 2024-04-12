@@ -10,11 +10,11 @@ public class Account {
         balance.add(amount);
     }
 
-    public Balance printBalance() {
-        return balance;
+    public void withdraw(Amount amount) {
+        balance.withdraw(amount);
     }
 
-    public void withdraw(Amount amount) {
-        balance = new Balance(1000);
+    public Balance printBalance() {
+        return balance;
     }
 }
